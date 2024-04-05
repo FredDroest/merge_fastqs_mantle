@@ -17,7 +17,7 @@ def login_to_mantle(run_id: str, env=None, tenant=None):
 
 def pull_entities(run, stage_dir):
     # Get their data from S3 into the current directory.
-    run.pull_s3_input("fastq", stage_dir + "to_assemble.fastq.gz")
+    run.pull_s3_input("fastq-folder", stage_dir + "/to_assemble/")
 
 
 def stage_input_entities(pipeline_id: str, stage_dir: str, env=None, tenant=None):
